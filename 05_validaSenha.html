@@ -6,10 +6,15 @@
     */
 
     //Entrada
-
+    const senha = Number(prompt(`Informe uma senha de quatro números inteiros:`));
 
     //Processamento
+    while (senha < 0 || nota > 4 || isNaN(senha)) {
+        senha = Number(prompt(`Informe a sua senha de quatro digitos:`));
+        alert(`${senha} a senha etsá inválida! tente novamente:`);
+    }
 
+    
 
     //Saída
 
