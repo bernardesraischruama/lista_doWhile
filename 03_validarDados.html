@@ -13,13 +13,31 @@
     //Entrada
     let nome = prompt(`Nome:`).trim();
     let idade = prompt(`Idade:`).trim();
-    let salário = Number(prompt(`salário:`)).trim();
+    let salário = Number(prompt(`salário:`));
     let sexo = prompt(` 'f' ou 'm' `).trim();
     let estadoCivil = prompt(` 's', 'c', 'v', 'd' `).trim();
-    
+
     //Processamento
-
-
+    while (nome.length < 4) {
+        alert(`Nome menor que 4 caracteres!`)
+        nome = prompt(`Nome:`).trim();
+    }
+    while (idade < 0 || idade > 150 || isNaN(idade)) {
+        alert(`Idade incorreta!`);
+        idade = Number(prompt(`Idade:`));
+    }
+    while (salario < 0) {
+        alert(`Salário menor que zero!`);
+        salario = Number(prompt(`Salario:`));
+    }
+    while (sexo != "F" && sexo != "M") {
+        alert(`Sexo diferente não rotulado!`);
+        sexo = prompt(`Sexo: (F - M)`).trim().toUpperCase();
+    }
+    while (estadoCivil != "S" && estadoCivil != "C" && estadoCivil != "V" && estadoCivil != "D") {
+        alert(`Estado civil inválido!`);
+        estadoCivil = prompt(`Estado civil: (S - C - V - D)`).trim().toUpperCase();
+    }
     //Saída
 
 </script>

@@ -6,11 +6,15 @@
     */
 
     //Entrada
-    
+    let usuario = prompt(`Informe o nome do seu usuário:`).trim();
+    let senha = prompt(`Informe a senha:`).trim();
 
     //Processamento
+    while (usuario == senha) {
+        alert(`Senha teve ser igual ao número do usuário!`);
+        senha = prompt(`Informe sua senha:`).trim();
 
-
+    }
     //Saída
 
 </script>
